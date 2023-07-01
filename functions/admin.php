@@ -7,7 +7,7 @@
 // Customize the admin menus.
 function rlmg_remove_admin_menu_links() {
   remove_menu_page('edit-comments.php');
-  remove_menu_page('edit.php');
+  // remove_menu_page('edit.php');
 }
 add_action('admin_menu', 'rlmg_remove_admin_menu_links');
 
