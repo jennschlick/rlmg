@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="17px" viewBox="0 0 22 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M19.6595952,7.18872305 L1.00017018,7.18872305 L6.09478706,0.812638121 C6.18855301,0.687616848 6.18855301,0.468829621 6.03227642,0.375063666 C5.90725515,0.281297711 5.68846792,0.281297711 5.59470197,0.437574302 L0.0937659548,7.31374432 C0.0625106365,7.37625496 0.0312553183,7.43876559 0.0312553183,7.50127623 C0.0312553183,7.56378686 0.0625106365,7.65755282 0.0937659548,7.68880814 L5.59470197,14.5649782 C5.6572126,14.6274888 5.75097856,14.6899994 5.84474451,14.6899994 C5.90725515,14.6899994 5.96976579,14.6587441 6.03227642,14.6274888 C6.1572977,14.5337228 6.18855301,14.3149356 6.09478706,14.1899143 L1.00017018,7.81382941 L19.6595952,7.81382941 C19.8471271,7.81382941 19.9721484,7.68880814 19.9721484,7.50127623 C19.9721484,7.31374432 19.8471271,7.18872305 19.6595952,7.18872305 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-0.5" y="-0.5" width="20.940893" height="15.3789271">
+            <rect x="-0.468744682" y="-0.188927694" width="20.940893" height="15.3789271" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow-white" transform="translate(1.000000, 1.000000)" fill-rule="nonzero">
+            <g id="Page-1">
+                <g id="Shape" transform="translate(10.001702, 7.500536) rotate(-180.000000) translate(-10.001702, -7.500536) ">
+                    <use fill="#B6BD00" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <use stroke="#B6BD00" mask="url(#mask-2)" stroke-width="1" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

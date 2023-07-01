@@ -1,0 +1,54 @@
+// --------------------------
+// Filter
+// I. Default
+// --------------------------
+
+// --------------------------
+// I. Default
+// --------------------------
+
+.filter {
+  text-align: center;
+
+  .button {
+    box-sizing: border-box;
+  }
+}
+
+.filter--mobile {
+  @media (max-width: $medium - 1) {
+    display: block;
+    margin: 0 0 ($spacer) 0;
+    padding: 0;
+    width: 100%;
+
+    summary {
+      cursor: pointer;
+      font-size: $fontsizesmall;
+      outline: 0;
+      text-transform: uppercase;
+    }
+
+    .button {
+      &:first-of-type {
+        margin-top: ($spacer);
+      }
+    }
+  }
+
+  @media (min-width: $medium) {
+    display: none;
+  }
+}
+
+.filter--desktop {
+  @media (max-width: $medium - 1) {
+    display: none;
+  }
+
+  @media (min-width: $medium) {
+    display: block;
+    margin-bottom: ($spacer * 3);
+    padding: 0 ($spacer);
+  }
+}

@@ -1,0 +1,145 @@
+// --------------------------
+// Typography
+// I. Default
+// II. Headings
+// III. Links
+// IV. Quotes
+// V. Selection
+// --------------------------
+
+// --------------------------
+// I. Default
+// --------------------------
+
+body {
+  color: $fontcolor;
+  font-family: $din;
+  font-size: $fontsize;
+  font-weight: 300;
+  line-height: $lineheight;
+
+  @media (max-width: $medium - 1) {
+    font-size: 1.2rem;
+    line-height: $lineheightsmall;
+  }
+}
+
+// --------------------------
+// II. Headings
+// --------------------------
+
+h1,
+.h1 {
+  font-size: 2rem;
+  font-weight: 300;
+
+  @media (min-width: $medium) {
+    font-size: 64px;
+  }
+}
+
+h2,
+.h2 {
+  font-weight: 300;
+
+  @media (max-width: $medium - 1) {
+    font-size: $fontsizelarge;
+  }
+
+  @media (min-width: $medium) {
+    font-size: 22px;
+  }
+}
+
+h3,
+.h3 {
+  font-weight: normal;
+
+  @media (max-width: $medium - 1) {
+    font-size: inherit;
+  }
+
+  @media (min-width: $medium) {
+    font-size: 20px;
+  }
+}
+
+h4,
+.h4 {
+  font-weight: normal;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+
+  @media (max-width: $medium - 1) {
+    font-size: inherit;
+  }
+
+  @media (min-width: $medium) {
+    font-size: 18px;
+  }
+}
+
+// --------------------------
+// III. Links
+// --------------------------
+
+a {
+  color: $blue;
+
+  &,
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// --------------------------
+// IV. Quotes
+// --------------------------
+
+blockquote {
+
+  @media (max-width: $medium - 1) {
+    font-size: 19px;
+    line-height: $lineheightsmall;
+  }
+
+  @media (min-width: $medium) {
+    font-size: $fontsizexlarge;
+    line-height: $lineheightsmall;
+  }
+
+  &:before {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMzBweCIgaGVpZ2h0PSIyOHB4IiB2aWV3Qm94PSIwIDAgMzAgMjgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQyICgzNjc4MSkgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+4oCcPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTE5Ljg4NSwyNy41NyBDMTguODUxNjYxNSwyNy41NyAxOC4zMzUsMjcuMDUzMzM4NSAxOC4zMzUsMjYuMDIgTDE4LjMzNSwxNS40OCBDMTguMzM1LDE0LjEzNjY1OTkgMTguNjk2NjYzLDEyLjk0ODMzODUgMTkuNDIsMTEuOTE1IEwyNi43MDUsMS42ODUgQzI3LjIyMTY2OTIsMC44NTgzMjkyIDI3Ljc4OTk5NjksMC40NDUgMjguNDEsMC40NDUgQzI5LjM0MDAwNDYsMC40NDUgMjkuODA1LDAuOTA5OTk1MzUgMjkuODA1LDEuODQgTDI5LjgwNSwyNi4wMiBDMjkuODA1LDI3LjA1MzMzODUgMjkuMjg4MzM4NSwyNy41NyAyOC4yNTUsMjcuNTcgTDE5Ljg4NSwyNy41NyBaIE0xLjkwNSwyNy41NyBDMC44NzE2NjE1LDI3LjU3IDAuMzU1LDI3LjA1MzMzODUgMC4zNTUsMjYuMDIgTDAuMzU1LDE1LjQ4IEMwLjM1NSwxNC42NTMzMjkyIDAuNDA2NjY2MTUsMTMuOTgxNjY5MiAwLjUxLDEzLjQ2NSBDMC42MTMzMzM4NSwxMi45NDgzMzA3IDAuODcxNjY0NiwxMi40MzE2NjkyIDEuMjg1LDExLjkxNSBMOC43MjUsMS42ODUgQzkuMjQxNjY5MjUsMC44NTgzMjkyIDkuODA5OTk2OSwwLjQ0NSAxMC40MywwLjQ0NSBDMTEuMzYwMDA0NywwLjQ0NSAxMS44MjUsMC45MDk5OTUzNSAxMS44MjUsMS44NCBMMTEuODI1LDI2LjAyIEMxMS44MjUsMjcuMDUzMzM4NSAxMS4zMDgzMzg1LDI3LjU3IDEwLjI3NSwyNy41NyBMMS45MDUsMjcuNTcgWiIgaWQ9IuKAnCIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPgogICAgPC9nPgo8L3N2Zz4=) center center no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    font-size: 155px;
+    height: 25px;
+    margin: 0 auto 1rem auto;
+    text-align: center;
+    width: 25px;
+  }
+
+  cite {
+    display: block;
+    font-size: $fontsize;
+    font-style: normal;
+    margin-top: 1rem;
+  }
+}
+
+// --------------------------
+// V. Selection
+// --------------------------
+
+::selection {
+  background: $green;
+  color: $white;
+}
+
+::-moz-selection {
+  background: $green;
+  color: $white;
+}

@@ -1,0 +1,398 @@
+// --------------------------
+// Grid
+// I. Grid item
+// II. Project
+// --------------------------
+
+// --------------------------
+// I. Grid item
+// --------------------------
+
+.grid-item {
+
+  a {
+    color: $white;
+    display: block;
+  }
+
+  @media (max-width: $medium - 1) {
+    padding: 0;
+  }
+
+  @media (max-width: $large - 1) {
+    width: 100%;
+
+    &:not(:last-child) {
+      padding-bottom: ($spacer * 2);
+    }
+  }
+
+  @media (min-width: $medium) {
+    padding: 0 ($spacer);
+  }
+
+  @media (min-width: $large) {
+    padding-bottom: ($spacer * 2);
+    width: 50%;
+  }
+}
+
+.grid-item-image {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.grid-item-third {
+  @media (min-width: $xlarge) {
+    width: (100% / 3);
+  }
+}
+
+.grid-item-fourth {
+  @media (min-width: $xlarge) {
+    width: 25%;
+  }
+}
+
+// --------------------------
+// II. Person
+// --------------------------
+
+.grid-item-person {
+
+  .grid-item-overlay {
+    cursor: pointer;
+    margin-bottom: ($spacer);
+    position: relative;
+
+    &:hover {
+      .grid-item-overlay-bg {
+        opacity: 1;
+      }
+    }
+  }
+
+  .grid-item-overlay-bg {
+    background: $darkestgrayrgba;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+      top: 0;
+      left: 0;
+    transition: $transition;
+    width: 100%;
+  }
+
+  .grid-item-overlay-icon {
+    border: 1px solid $white;
+    border-radius: 100%;
+    color: $white;
+    height: 23px;
+    position: absolute;
+      bottom: ($spacer);
+      right: ($spacer);
+    text-align: center;
+    width: 23px;
+
+    @media (min-width: $medium) {
+      font-size: 30px;
+      line-height: 18px;
+    }
+  }
+
+  .grid-item-title,
+  .grid-item-subtitle {
+    margin-bottom: 0;
+  }
+
+  .grid-item-title {
+    @media (min-width: $medium) {
+      font-size: $fontsizelarge;
+    }
+  }
+}
+
+// --------------------------
+// II. Project
+// --------------------------
+
+.grid-item-project {
+
+  > a {
+    position: relative;
+  }
+
+  .grid-item-content {
+    width: 100%;
+
+    @media (min-width: $medium) {
+      position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    @media (min-width: $large) {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease-out;
+    }
+  }
+
+  .grid-item-content-inner {
+    padding: ($spacer);
+    transition: all 1s ease-in-out;
+
+    @media (max-width: $medium - 1) {
+      background: $darkestgray;
+    }
+
+    @media (min-width: $medium) {
+      background: $darkestgrayrgba;
+    }
+
+    * {
+      margin-bottom: 0;
+    }
+  }
+
+  .grid-item-title {
+    @media (min-width: $medium) {
+      font-size: $fontsizelarge;
+      line-height: $lineheightsmall;
+    }
+  }
+
+  .grid-item-subtitle {
+    @media (max-width: $medium - 1) {
+      font-size: $fontsizesmall;
+    }
+  }
+
+  @media (min-width: $medium) {
+    &:hover {
+      .grid-item-content {
+        max-height: 300px;
+      }
+    }
+  }
+}
+
+// --------------------------
+// III. Expanding
+// --------------------------
+
+.og-grid {
+  display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  flex-flow: row wrap;
+	list-style: none;
+	margin: 0;
+  padding: 0;
+	width: 100%;
+
+  li {
+    display: inline-block;
+    margin: 0 0 ($spacer * 2) 0;
+    padding: 0 ($spacer);
+  	vertical-align: top;
+
+    @media (max-width: $medium - 1) {
+      width: 100%;
+    }
+
+    @media (min-width: $medium) {
+      width: 50%;
+    }
+
+    @media (min-width: $large) {
+      width: 25%
+    }
+
+    > a {
+      color: $fontcolor;
+
+      &,
+      img {
+        border: none;
+      	outline: none;
+      	display: block;
+      	position: relative;
+      }
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+
+      p {
+        margin: 0;
+        text-align: left;
+      }
+
+      .person-name {
+        margin-top: ($spacer);
+
+        @media (min-width: $medium) {
+          font-size: $fontsizelarge;
+          line-height: $lineheightsmall;
+        }
+      }
+    }
+
+    &.og-expanded {
+      > a {
+        &:after {
+          top: auto;
+        	border: solid transparent;
+        	content: " ";
+        	height: 0;
+        	width: 0;
+        	position: absolute;
+        	pointer-events: none;
+        	border-bottom-color: $lightgray;
+        	border-width: 15px;
+        	left: 50%;
+        	margin: -6px 0 0 -15px;
+        	pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+.person-image {
+  position: relative;
+
+  &:before,
+  &:after {
+    opacity: 0;
+    transition: $transition;
+    z-index: 1;
+  }
+
+  &:before {
+    background: $darkgrayrgba;
+    content: '';
+    height: 100%;
+    position: absolute;
+      top: 0;
+      left: 0;
+    width: 100%;
+  }
+
+  &:after {
+    border: 1px solid $white;
+    border-radius: 100%;
+    color: $white;
+    content: '+';
+    font-size: 26px;
+    height: 22px;
+    line-height: 16px;
+    position: absolute;
+      bottom: ($spacer);
+      right: ($spacer);
+    text-align: center;
+    width: 22px;
+  }
+
+  &:hover {
+    &:before,
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.og-expander {
+	background: $lightgray;
+  height: 0;
+  margin-top: ($spacer * 1.5);
+  overflow: hidden;
+  position: absolute;
+    top: auto;
+	  left: 0;
+  text-align: left;
+	width: 100%;
+
+  .person-name {
+    margin-bottom: 0;
+
+    @media (min-width: $medium) {
+      font-size: $fontsizexlarge;
+    }
+  }
+}
+
+.og-expander-inner {
+  background: $lightgray;
+  height: 100%;
+
+  @media (max-width: $large - 1) {
+    padding: ($spacer * 2);
+  }
+
+  @media (min-width: $large) {
+    padding: ($spacer * 3);
+  }
+}
+
+.og-close {
+  cursor: pointer;
+  height: 20px;
+	position: absolute;
+    top: ($spacer * 2 + 12);
+    right: ($spacer * 2 + 12);
+	width: 20px;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    background: $darkergray;
+    content: '';
+    height: 1px;
+  	position: absolute;
+      top: 50%;
+  	transform: rotate(45deg);
+    width: 100%;
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.og-fullimg,
+.og-details {
+	height: 100%;
+  position: relative;
+
+  @media (min-width: $large) {
+    float: left;
+  	overflow: hidden;
+    width: 50%;
+  }
+}
+
+.og-fullimg {
+
+  @media (max-width: $large - 1) {
+    display: none;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.og-details {
+  @media (min-width: $large) {
+    padding-left: ($spacer * 2);
+  }
+}
+
+.og-loading {
+	display: none;
+}

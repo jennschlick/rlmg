@@ -1,0 +1,299 @@
+// --------------------------
+// Panel
+// I. Default
+// II. Background panel
+// III. Callout panel
+// IV. Top panel
+// --------------------------
+
+// --------------------------
+// I. Default
+// --------------------------
+
+.panel {
+  background: $white;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: $medium - 1) {
+    padding: ($spacer * 2.5) 0;
+
+    > .container {
+      padding-left: ($spacer * 2);
+      padding-right: ($spacer * 2);
+    }
+  }
+
+  @media (min-width: $medium) {
+    padding: ($spacer * 6) 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  > .container {
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// --------------------------
+// II. Background panel
+// --------------------------
+
+.panel-bg {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+  display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: flex-end;
+  height: auto;
+  padding: 0 !important;
+
+  .container {
+    display: flex;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: $small) {
+      width: 100%;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+    @media (max-width: $medium - 1) {
+      height: 50%;
+    }
+
+    @media (min-width: $medium) {
+      height: 30%;
+    }
+  }
+
+  &:before {
+    background: linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 100%);
+    top: 0;
+  }
+
+  &:after {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 100%);
+    bottom: 0;
+  }
+
+  h1 {
+    line-height: 1;
+    margin: 0 0 ($spacer / 2) 0;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  h1, h2 {
+    color: $white;
+  }
+}
+
+#container > .panel.panel-bg:first-of-type {
+  @media (max-width: $medium - 1) {
+    background-position: center 45px;
+    margin-top: 45px;
+  }
+}
+
+.panel-bg-image {
+  display: block;
+  height: auto;
+  width: 100%;
+  z-index: -1;
+}
+
+.panel-bg-video {
+  height: auto;
+  position: fixed;
+    top: 0;
+    left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.panel-bg-video-hidden {
+  display: block;
+  height: auto;
+  width: 100%;
+  z-index: -2;
+}
+
+.panel-bg:not(.panel-top-home) {
+  .panel-bg-content {
+    position: absolute;
+      left: 0;
+    width: 100%;
+
+    @media (max-width: $medium - 1) {
+      padding-left: ($spacer * 2);
+      padding-right: ($spacer * 2);
+    }
+
+    @media (max-width: $large - 1) {
+      bottom: ($spacer);
+    }
+
+    @media (min-width: $medium) {
+      padding-left: ($spacer);
+      padding-right: ($spacer);
+    }
+
+    @media (min-width: $large) {
+      bottom: ($spacer * 4);
+    }
+  }
+}
+
+.panel-top-home {
+  background: none;
+  height: auto !important;
+  max-height: 100vh !important;
+  padding: 0 !important;
+
+  &:before {
+    @media (min-width: $medium) {
+      background: linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 100%);
+      content: '';
+      height: 30%;
+      position: absolute;
+        left: 0;
+        top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  &:after {
+    @media (min-width: $medium) {
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 100%);
+      content: '';
+      height: 30%;
+      position: absolute;
+        left: 0;
+        bottom: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  .panel-bg-content {
+
+    @media (max-width: $medium - 1) {
+      padding: ($spacer) 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    @media (min-width: $medium) {
+      padding-left: ($spacer);
+      padding-right: ($spacer);
+      position: absolute;
+        bottom: ($spacer * 5);
+        left: 0;
+      z-index: 2;
+    }
+  }
+
+  > .container {
+    @media (max-width: $medium - 1) {
+      background: $white;
+      width: 100%;
+    }
+
+    @media (min-width: $medium) {
+      position: absolute;
+        bottom: 0;
+        left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 2;
+    }
+  }
+
+  p {
+    font-weight: normal;
+    margin: 0;
+
+    @media (max-width: $medium - 1) {
+      color: $fontcolor;
+    }
+
+    @media (min-width: $medium) {
+      color: $white;
+      font-size: 50px;
+      line-height: $lineheightsmall;
+    }
+
+    span {
+      display: inline-block;
+
+      em {
+        color: $green;
+        font-style: normal;
+      }
+    }
+  }
+}
+
+#container > .panel.panel-top-home:first-of-type {
+  @media (max-width: $medium - 1) {
+    margin-top: 45px;
+  }
+
+  .panel-bg-video {
+    @media (max-width: $medium - 1) {
+      top: 45px;
+    }
+  }
+}
+
+// --------------------------
+// III. Callout panel
+// --------------------------
+
+.panel-callout {
+  color: $white;
+  text-align: center;
+
+  @media (min-width: $medium) {
+    font-size: $fontsizelarge;
+  }
+
+  > .container {
+    max-width: 700px;
+  }
+}
+
+// --------------------------
+// IV. Top panel
+// --------------------------
+
+.panel-top {
+
+  @media (max-width: $medium - 1) {
+    padding-top: ($spacer * 5);
+  }
+
+  @media (min-width: $medium) {
+    padding-top: ($spacer * 8);
+  }
+}

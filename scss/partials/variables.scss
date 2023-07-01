@@ -1,0 +1,102 @@
+// --------------------------
+// Variables
+// I. Animations
+// II. Breakpoints
+// III. Colors
+// IV. Grid
+// V. Typography
+// --------------------------
+
+// --------------------------
+// I. Animations
+// --------------------------
+
+$transition: all .15s ease-in-out;
+
+// --------------------------
+// II. Breakpoints
+// --------------------------
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+$small: 576px;
+
+// Medium devices (tablets, 768px and up)
+$medium: 768px;
+
+// Large devices (desktops, 992px and up)
+$large: 992px;
+
+// Extra large devices (large desktops, 1200px and up)
+$xlarge: 1200px;
+
+// --------------------------
+// III. Colors
+// --------------------------
+
+$lightgray: #eaeff2;
+$mediumgray: #727d84;
+$darkgray: #373d42;
+$darkgrayrgba: rgba(55, 61, 66, .87);
+$darkergray: #2a2e33;
+$darkestgray: #1b1d21;
+$darkestgrayrgba: rgba(27, 29, 33, .9);
+$black: #000;
+
+$blue: #05538a;
+$lightblue: #5fb2e2;
+
+$darkgreen: #77871c;
+$green: #b4bd34;
+
+$darkorange: #e75200;
+$orange: #f5821f;
+
+$red: #c32032;
+
+$white: #fff;
+
+// --------------------------
+// IV. Grid
+// --------------------------
+
+$spacer: 15px;
+
+// --------------------------
+// V. Typography
+// --------------------------
+
+@font-face {
+	font-family: 'DINNextRoundedLTW01';
+	src: url('../fonts/DINNextRoundedLTW01-Regular.eot');
+	src: url('../fonts/DINNextRoundedLTW01-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/DINNextRoundedLTW01-Regular.woff') format('woff'),
+		url('../fonts/DINNextRoundedLTW01-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DINNextRoundedLTW01';
+	src: url('../fonts/DINNextRoundedLTW01-Light.eot');
+	src: url('../fonts/DINNextRoundedLTW01-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/DINNextRoundedLTW01-Light.woff') format('woff'),
+		url('../fonts/DINNextRoundedLTW01-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+$din: 'DINNextRoundedLTW01', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+$fontcolor: $darkgray;
+
+$fontsize: 16px;
+$fontsizexsmall: 12px;
+$fontsizesmall: 14px;
+$fontsizelarge: 24px;
+$fontsizexlarge: 30px;
+
+$lineheight: 1.45;
+$lineheightsmall: 1.3;

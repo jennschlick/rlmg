@@ -1,0 +1,59 @@
+// --------------------------
+// Form
+// I. Contact Form 7
+// --------------------------
+
+// --------------------------
+// I. Contact Form 7
+// --------------------------
+
+.wpcf7 {
+  input[type=email],
+  input[type=text],
+  textarea {
+    background: $white;
+    border: 1px solid $mediumgray;
+    color: $fontcolor;
+    font-family: $din;
+    font-size: $fontsize;
+    padding: ($spacer / 2);
+    width: 100%;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  button,
+  input,
+  textarea {
+    border-radius: 0;
+    -webkit-appearance: none;
+
+    &:active,
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.wpcf7-submit {
+  background: transparent;
+  border: 1px solid $mediumgray;
+  color: $mediumgray;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $din;
+  font-size: $fontsizesmall;
+  padding: ($spacer / 3) ($spacer);
+  text-transform: uppercase;
+  transition: $transition;
+
+  &:active,
+  &:focus,
+  &:hover,
+  &.is-checked {
+    background: $mediumgray;
+    color: $white;
+  }
+}

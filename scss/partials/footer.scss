@@ -1,0 +1,121 @@
+// --------------------------
+// Footer
+// I. Default
+// --------------------------
+
+// --------------------------
+// I. Default
+// --------------------------
+
+.footer {
+  border-bottom: ($spacer * 2) solid $darkgray;
+
+  a {
+    color: $darkgray;
+  }
+
+  &.panel {
+    padding-bottom: ($spacer * 3);
+    padding-left: ($spacer * 2);
+    padding-right: ($spacer * 2);
+  }
+}
+
+.footer-address {
+  margin: 0;
+  
+  > span {
+    display: block;
+
+    @media (max-width: $medium - 1) {
+      margin-bottom: ($spacer);
+    }
+
+    @media (min-width: $medium) {
+      font-size: $fontsizexlarge;
+      line-height: $lineheightsmall;
+    }
+
+    > a {
+      @media (max-width: $medium - 1) {
+        display: block;
+      }
+    }
+
+    > span {
+      @media (max-width: $medium - 1) {
+        display: none;
+      }
+
+      @media (min-width: $medium) {
+        margin: 0 ($spacer);
+      }
+    }
+  }
+}
+
+.footer-colophon {
+  font-size: $fontsizesmall;
+
+  @media (min-width: $medium) {
+    margin-top: ($spacer * 6);
+  }
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: ($spacer / 2);
+
+  svg {
+    height: 30px;
+    width: auto;
+  }
+}
+
+.footer-social {
+
+  @media (max-width: $medium - 1) {
+    padding: ($spacer * 2) 0;
+  }
+
+  a {
+    border: 2px solid $darkergray;
+    border-radius: 100%;
+    display: inline-block;
+    height: 40px;
+    position: relative;
+    transition: $transition;
+    width: 40px;
+
+    &:not(:last-child) {
+      margin-right: ($spacer);
+    }
+
+    &:hover {
+      background: $darkergray;
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  svg {
+    height: 60%;
+    position: absolute;
+      top: 50%;
+      left: 50%;
+    transition: $transition;
+    transform: translate(-50%, -50%);
+    width: auto;
+
+    path {
+      fill: $darkergray;
+    }
+  }
+
+  @media (min-width: $medium) {
+    text-align: right;
+  }
+}
