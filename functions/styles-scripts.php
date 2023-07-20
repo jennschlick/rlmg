@@ -6,7 +6,7 @@
 
 function rlmg_styles_scripts() {
   // Enqueue global styles
-  wp_enqueue_style('rlmg-styles', get_template_directory_uri() . '/css/style.css', null, null, 'all');
+  wp_enqueue_style('rlmg-styles', get_template_directory_uri() . '/css/style.css?v=20230720', null, null, 'all');
 
   // Enqueue global scripts
   wp_enqueue_script('rlmg-modernizr', get_template_directory_uri() . '/js/modernizr.custom.js', '', '1.0', false);
