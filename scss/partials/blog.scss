@@ -1,0 +1,46 @@
+// --------------------------
+// Blog
+// I. List of posts
+// II. Single post
+// --------------------------
+
+// --------------------------
+// I. List of posts
+// --------------------------
+
+body.blog {
+	.panel {
+		.container {
+			.post-title {
+				margin-bottom: 0;
+			}
+			.post-date {
+				color: $mediumgray;
+				font-size: $fontsizesmall;
+				margin-bottom: ($spacer * 2);
+			}
+		}
+	}
+}
+
+// --------------------------
+// II. Single post
+// --------------------------
+
+body.single-post {
+	.panel:not(.panel-top) {
+		.container {
+			h1 {
+				font-size: $fontsizelarge;
+				margin-bottom: ($spacer / 2);
+			}
+
+			time {
+				color: $mediumgray;
+				display: block;
+				font-size: $fontsizesmall;
+				margin-bottom: ($spacer * 2);
+			}
+		}
+	}
+}

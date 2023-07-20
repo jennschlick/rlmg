@@ -104,7 +104,9 @@
   }
 
   h1, h2 {
-    color: $white;
+    &, a {
+			color: $white;
+		}
   }
 }
 
@@ -271,8 +273,11 @@
 // --------------------------
 
 .panel-callout {
-  color: $white;
   text-align: center;
+
+  &, a {
+  	color: $white;
+  }
 
   @media (min-width: $medium) {
     font-size: $fontsizelarge;

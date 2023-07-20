@@ -4,6 +4,7 @@
 // II. Outline
 // III. Reverse
 // IV. Text
+// V. Pagination
 // --------------------------
 
 // --------------------------
@@ -108,4 +109,57 @@
     vertical-align: top;
     width: 20px;
   }
+}
+
+// --------------------------
+// V. Pagination
+// --------------------------
+
+.pagination {
+	display: block;
+	margin-top: ($spacer * 3);
+	text-align: center;
+
+	a {
+		background: transparent;
+	  border: 1px solid $mediumgray;
+	  color: $mediumgray;
+		cursor: pointer;
+	  display: inline-block;
+	  font-family: $din;
+	  font-size: $fontsizesmall;
+	  padding: ($spacer / 3) ($spacer);
+	  text-transform: uppercase;
+	  transition: $transition;
+
+	  &:active,
+	  &:focus,
+	  &:hover {
+	    background: $white;
+	    color: $darkergray;
+	  }
+
+	  &:active,
+	  &:focus,
+	  &:hover,
+	  &.is-checked {
+	    background: $mediumgray;
+	    color: $white;
+	    outline: 0;
+	  }
+	}
+}
+
+.pagination-posts {
+	display: block;
+	margin-top: ($spacer * 4);
+	text-align: center;
+
+	a {
+		display: inline-block;
+		.post-title {
+			display: inline-block;
+			font-weight: 400;
+		}
+	}
 }
