@@ -7,7 +7,7 @@
       "uuidString" : "F1F48D06-20F1-4786-B679-F5658B88540C"
     }
   ],
-  "creatorBuild" : "34510",
+  "creatorBuild" : "34513",
   "files" : {
     "\/css\/style.css" : {
       "aP" : 0,
@@ -1713,9 +1713,6 @@
       "no-return-assign" : {
         "active" : 0,
         "optionString" : "'except-parens'"
-      },
-      "no-return-await" : {
-        "active" : 0
       },
       "no-script-url" : {
         "active" : 0
