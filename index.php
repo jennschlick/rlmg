@@ -90,11 +90,16 @@ if( $top_panel && in_array('enable', $top_panel) ): ?>
 				</div>
 			</div>
 			<?php } ?>
-			<div class="col-lg-8<?php $post = get_post(2698); $the_content = apply_filters('the_content', $post->post_content); if ( empty($the_content) ) { ?> offset-lg-2<?php } ?>">
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<p class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-					<p class="post-date"><?php echo get_the_date('l, F j, Y'); ?></p>
-				<?php endwhile; ?>
+			<div class="col-lg-8<?php $post = get_post(2698); $the_content = apply_filters('the_content', $post->post_content); if ( empty($the_content) ) { ?> offset-lg-2<?php } ?> ">
+				<div class="grid-blog">
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<div class="grid-item-blog-post">
+							<? if ( has_post_thumbnail() ) { echo '<a href="' . get_the_permalink() . '"><img src="' . get_the_post_thumbnail_url() . '"></a>'; } ?>
+							<p class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+							<p class="post-date"><?php echo get_the_date('l, F j, Y'); ?></p>
+						</div>
+					<?php endwhile; ?>
+				</div>
 				<div class="pagination">
 				<?php if ( get_previous_posts_link() ) { ?><?php previous_posts_link( 'Previous page' ); ?><?php } ?>
 				<?php if ( get_next_posts_link() ) { ?><?php next_posts_link( 'Next page' ); ?><?php } ?>

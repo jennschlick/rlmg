@@ -11,9 +11,12 @@
 body.blog {
 	.panel {
 		.container {
+
 			.post-title {
+				line-height: $lineheightsmall;
 				margin-bottom: 0;
 			}
+
 			.post-date {
 				color: $mediumgray;
 				font-size: $fontsizesmall;
@@ -21,6 +24,33 @@ body.blog {
 			}
 		}
 	}
+}
+
+.grid-blog {
+	@media (min-width: $large) {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+.grid-item-blog-post {
+	@media (min-width: $large) {
+    width: 48%;
+  }
+
+  &:nth-child(odd) {
+  	margin-right: ($spacer);
+  }
+
+  &:nth-child(event) {
+  	margin-left: ($spacer);
+  }
+
+  img {
+  	height: auto;
+  	margin-bottom: ($spacer / 2);
+  	width: 100%;
+  }
 }
 
 // --------------------------
